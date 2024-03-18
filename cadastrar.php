@@ -1,9 +1,9 @@
 <?php
 
-session_start();
+    session_start();
 
 if(!isset($_SESSION['nomeProdutos'])){
-    $home ="http://localhost/Php-Tarefa-01-main/index.php";
+    $home ="http://localhost/Php/Php-Tarefa-01/index.php";
     header('Location:'.$home);
 }
 
@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 
-$home ="http://localhost/Php-Tarefa-01-main/index.php";
+$home ="http://localhost/Php/Php-Tarefa-01/index.php";
 header('Location:'.$home);
 
 ?>

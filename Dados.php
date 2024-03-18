@@ -4,7 +4,7 @@
 
 if(!isset($_SESSION['nomeProdutos'])){
 
-    $home ="http://localhost/Php-Tarefa-01-main/index.php";
+    $home ="http://localhost/Php/Php-Tarefa-01/index.php";
     header('Location:'.$home);  
 }
 

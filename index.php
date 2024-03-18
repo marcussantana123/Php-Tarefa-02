@@ -11,15 +11,15 @@
 
 
 
-<div class="m-5">
+<div class="m-5 p-4">
 
-<?php include"navBar.php";?>
+<?php 
+session_start();
+include"navBar.php";?>
 
 <div class = "d-flex row gap-3">
 
 <?php 
-
-session_start();
 
 if(!isset($_SESSION['nomeProdutos'])){
   $_SESSION['nomeProdutos'] = array("Arroz","Carne","Feijão","Leite");
@@ -43,8 +43,7 @@ foreach($_SESSION['nomeProdutos'] as $produtos){?>
 
 if(isset($_POST['submit'])) 
 { 
-  array_push($nomeProdutos, $_POST['produto']);
-  
+  array_push($nomeProdutos, $_POST['produto']); 
 }
 
 ?>
@@ -56,7 +55,7 @@ if(isset($_POST['submit']))
 <form class="row g-3" action= "cadastrar.php" method="post">
   <div class="col-auto">
     <label for="NomeProduto" class="visually-hidden">Nome do Produto:</label>
-    <input type="text" class="form-control" id="NomeProduto" name="NomeProduto" placeholder="Banana">
+    <input type="text" class="form-control" id="produto" name="produto" placeholder="Banana">
   </div>
   <div class="col-auto">
     <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
